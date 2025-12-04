@@ -1,0 +1,11 @@
+.resetButton {
+    font-size:16px;
+    background-color: #824f8c;
+    width:150px;
+    margin:10px;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    border-color: black;
+    border-width: 5px;
+}
