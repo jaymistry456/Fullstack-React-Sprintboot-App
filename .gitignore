@@ -1,32 +1,77 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+/frontend/node_modules/
+/frontend/build/
+/frontend/.env
+/frontend/.parcel-cache/
+/frontend/.pnp.cjs
+/frontend/.pnp.loader.mjs
+/frontend/.next/
+/frontend/out/
+/frontend/dist/
+/frontend/.cache/
+frontend/.vscode/
+/frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.eslintcache
 
-# testing
-/coverage
+# Spring Boot / Java
 
-# production
-/build
+/backend/target/
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.idea/
+/backend/*.iml
+/backend/*.ipr
+/backend/*.iws
+/backend/logs/
+/backend/*.log
+/backend/out/
+/backend/build/
+backend/.mvn/wrapper/maven-wrapper.jar
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Generic
 
-# IDEs
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# Mac
+*.class
+*.jar
+*.war
+*.ear
+*.db
 *.DS_Store
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+
+# Eclipse
+
+/.classpath
+/.project
+/.settings/
+
+# IntelliJ IDEA
+
+/.idea/
+*.iml
+*.iws
+
+# VS Code
+
+.vscode/
+*.code-workspace
+
+# OS
+
+Thumbs.db
+ehthumbs.db
+.DS_Store
+~$*
+*.tmp
+*.swp
+
+# Optional environment files
+
+*.env
