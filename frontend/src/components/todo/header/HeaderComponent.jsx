@@ -3,6 +3,7 @@ import { useAuth } from "../security/AuthProvider";
 
 function HeaderComponent() {
   const {isAuthenticated, logout} = useAuth();
+  const { username } = useAuth();
 
   return (
     <header className="border-bottom border-light border-5 mb-5 p-2">
@@ -13,12 +14,12 @@ function HeaderComponent() {
               className="navbar-brand ms-2 fs-2 fw-bold text-black"
               href="https://www.in28minutes.com"
             >
-              in28minutes
+              {username}
             </a>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  {isAuthenticated && <Link className="nav-link" to="/welcome/in28minutes">
+                  {isAuthenticated && <Link className="nav-link" to={`/welcome/${username}`}>
                     Home
                   </Link>}
                 </li>
