@@ -1,10 +1,7 @@
 package com.in28minutes.rest.webservices.restfulwebservices.todo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,5 +27,15 @@ public class TodoController {
     @DeleteMapping(path = "/users/{username}/todos/{id}")
     public void deleteTodo(@PathVariable String username, @PathVariable int id) {
         todoService.deleteById(id);
+    }
+
+    @PutMapping(path = "/users/{username}/todos/{id}")
+    public void updateTodo(@PathVariable String username, @PathVariable int id, @RequestBody Todo todo) {
+        todoService.updateTodo(todo);
+    }
+
+    @PostMapping(path = "/users/{username}/todos")
+    public void createTodo(@PathVariable String username, @RequestBody Todo todo) {
+        todoService.addTodo(username, todo.getDescription(), todo.getTargetDate(), todo.isDone());
     }
 }

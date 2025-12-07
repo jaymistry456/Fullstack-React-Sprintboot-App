@@ -35,9 +35,13 @@ function ListTodosComponent() {
     }
   };
 
-  const updateTodo = async (id) => {
+  const updateTodo = (id) => {
     navigate(`/todo/${id}`);
   };
+
+  const addNewTodo = () => {
+    navigate('/todo/-1');
+  }
 
   return (
     <div className="container">
@@ -47,7 +51,6 @@ function ListTodosComponent() {
         <table className="table">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Description</th>
               <th>Is Done?</th>
               <th>Target Date</th>
@@ -58,7 +61,6 @@ function ListTodosComponent() {
           <tbody>
             {todos.map((todo) => (
               <tr key={todo.id}>
-                <td>{todo.id}</td>
                 <td>{todo.description}</td>
                 <td>{todo.done.toString()}</td>
                 <td>{todo.targetDate.toString()}</td>
@@ -83,6 +85,7 @@ function ListTodosComponent() {
           </tbody>
         </table>
       </div>
+      <div className="btn btn-success m-5"  onClick={addNewTodo}>Add New Todo</div>
     </div>
   );
 }

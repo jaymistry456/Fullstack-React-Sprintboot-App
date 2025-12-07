@@ -17,8 +17,8 @@ function LoginComponent() {
     setPassword(event.target.value);
   }
 
-  function handleSubmit() {
-    if (login(username, password)) {
+  async function handleSubmit() {
+    if (await login(username, password)) {
       navigate(`/welcome/${username}`);
     } else {
       setShowErrorMessage(true);
