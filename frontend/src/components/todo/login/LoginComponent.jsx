@@ -7,7 +7,7 @@ function LoginComponent() {
   const [password, setPassword] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const navigate = useNavigate();
-  const {login} = useAuth();
+  const { login } = useAuth();
 
   function handleUsernameChange(event) {
     setUsername(event.target.value);
@@ -35,7 +35,7 @@ function LoginComponent() {
       )}
       <div className="LoginForm">
         <div>
-          <label for="username">Username</label>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             name="username"
@@ -44,7 +44,7 @@ function LoginComponent() {
           ></input>
         </div>
         <div>
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
